@@ -21,7 +21,11 @@
      		echo "Successfully created database: " . $database;
      		//the dot is used to congaginate
      	}
+     }
 
+     else{
+     	echo "Database already exists.";
+     	//this is only going to be executed when the database already exist
      }
     
      $connection->close();
