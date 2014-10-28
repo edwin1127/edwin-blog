@@ -27,5 +27,19 @@
      	echo "Database already exists.";
      	//this is only going to be executed when the database already exist
      }
+
+     $query = $connection->query("CREATE TABLE posts ("
+     	. "id int(11) NOT NULL AUTO_INCREMENT," 
+     	. "title varchar(255) NOT NULL,"
+     	. "post text NOT NULL," 
+     	. "PRIMARY KEY (id))");
+     //were refrecing our connection variable
+     //not null makes the id to not be known
+     //were telling the variable on the bottom is the primary key
+     //the query is creating the data table there on top
+
+     if ($query) {
+     	echo "Successfully created table: posts";
+     }
     
      $connection->close();
