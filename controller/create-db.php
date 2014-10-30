@@ -6,7 +6,7 @@
      
      if($connection->connect_error) {
      	
-     	die("Error:" . $connection->connect_error);
+     	die("<p>Error:" . $connection->connect_error . "</p>");
      }
 
      $exists = $connection->select_db($database);
@@ -18,13 +18,13 @@
      	//it executes the info and it stores it in the jquery
      	if ($query) {
      		//we want to output a messgae so therefore we need $query
-     		echo "Successfully created database: " . $database;
+     		echo "<p>Successfully created database:" . $database . "</p>";
      		//the dot is used to congaginate
      	}
      }
 
      else{
-     	echo "Database already exists.";
+     	echo "<p>Database already exists.</p>";
      	//this is only going to be executed when the database already exist
      }
 
@@ -39,7 +39,13 @@
      //the query is creating the data table there on top
 
      if ($query) {
-     	echo "Successfully created table: posts";
+     	echo "<p>Successfully created table: posts</p>";
+     }
+     else{
+     	echo "<p>$connection->error</p>";
+     	//were telling it that its false
+     	//were doing paragraph tags that way the lines wont be together
      }
     
      $connection->close();
+     
