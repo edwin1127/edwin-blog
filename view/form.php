@@ -13,5 +13,10 @@
         <textarea name="postS"></textarea>
     <!-- this is going to be mainly for post-->
     </div>
+
+    <div>
+    	<button type="submit">Submit</button>
+    	<!--here were accesing a button-->
+    </div>
 	<!--this form file is goign to use some data and will send it to another server-->
 </form>
