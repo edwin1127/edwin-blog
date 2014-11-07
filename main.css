@@ -1,0 +1,12 @@
+body{
+	background-color: aqua;
+	color: aqua;
+
+	
+	}
+
+    @media (max-width: 320px) {
+    	
+    body {background-color: red;
+		}
+	}
