@@ -6,5 +6,6 @@
     //this is so we can filter the input
     echo "<p>Title: $title</p>";
     echo "<p>Title: $post</p>";
+    
 
 	//this folder is to create a post and push it to our data base 
