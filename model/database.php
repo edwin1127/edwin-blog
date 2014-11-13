@@ -13,9 +13,24 @@
 	    	$this->username = $username
 	    	$this->password = $password
 	    	$this->database = $database
-	    	//this uses to give you access to all the global variables
-
+	    	//this uses to give you access to all the global variable
+            //public means we can use it any file
 	    }
-	    //public means we can use it any file
+	   
+	   public function openConnection() {
+	    	//this function is to open a connection
+	    }
+
+	   public function closeConnection() {
+	   	//this is a function to close a connection
+
+	   }
+	
+       public function query($string){
+       	//the string could be located in a variable
+       }
+
 	}
+
+
 	
