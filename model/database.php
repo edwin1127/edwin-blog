@@ -29,12 +29,28 @@
 	    }
 
 	   public function closeConnection() {
-	   	//this is a function to close a connection
+	   		if (isset($this->connection)) {
+	   			$this->connection->();
+
+	   		//is set is used for knowing the variable is working or not
+	   		//this if statement is used for if they were to open the connection
+	   	    //this is a function to close a connection
+
+	   		}
 
 	    }
 	
        public function query($string) {
+       		$this->openConnection();
+
+       		$query = $this->connection->query($string);
+        //this is going to execute our database
+       	//what the line openconnection does is that it opens all the lines that are stored in the open functionS
        	//the string could be located in a variable
+       		$this->closeConnection();
+
+       		return $query;
+       		//we want to return our answer true or false
         }
   
 	}
