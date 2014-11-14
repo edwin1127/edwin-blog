@@ -18,18 +18,25 @@
 	    }
 	   
 	   public function openConnection() {
+	   		this->connection = new mysqli($this->host, $this->username, $this->password, $this->database);
+	   		//this is a connection to link all the files
 	    	//this function is to open a connection
+	    	 if($this->connection->connect_error) {
+     			 die("<p>Error:" . $this->connection->connect_error . "</p>");
+     			//were linking the connection
+       		 }
+
 	    }
 
 	   public function closeConnection() {
 	   	//this is a function to close a connection
 
-	   }
+	    }
 	
-       public function query($string){
+       public function query($string) {
        	//the string could be located in a variable
-       }
-
+        }
+  
 	}
 
 
