@@ -33,3 +33,4 @@ $query = $_SESSION["connection"]->query("CREATE TABLE users("
  else{
  	echo "<p>" . $_SESSION["connection"]->error . "</p>";
  }
+ L
